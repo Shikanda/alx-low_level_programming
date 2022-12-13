@@ -1,7 +1,7 @@
-#include "main.h" 
+#include "main.h"
 
 /**
-*main - alphabet lowercase
+*print_alphabet - entry point
 *
 *Return: always 0
 */
