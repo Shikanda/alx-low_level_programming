@@ -11,7 +11,7 @@ void times_table(void)
 	int row, column, num;
 
 	row = -1;
-	while (row <= 9)
+	while (row <= 8)
 	{	row++;
 		_putchar('0');
 		_putchar(',');
