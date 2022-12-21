@@ -1,10 +1,10 @@
 #include "main.h"
 /**
 *_strcmp - compares 2 strings
-*@dest: 1st string
-*@src: 2nd string
+*@s1: 1st string
+*@s2: 2nd string
 *
-*Return: what to be copied from dest
+*Return: always 0
 */
 int _strcmp(char *s1, char *s2)
 {
