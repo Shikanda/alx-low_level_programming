@@ -11,8 +11,12 @@ int is_prime_number(int n)
 
 	i = 1;
 	if (n % 1 == n)
-		return (0);
+	{
+		n++;
+		return (is_prime_number(i + 1));
+	}
 	else
-		return (is_prime_number(n + 1));
+		return (0);
+
 
 }
