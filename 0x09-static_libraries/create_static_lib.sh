@@ -1,2 +1,3 @@
 #!/bin/bash
-ar rc liball.a  >> gcc -c *.o 
+gcc -Wall -Werror -Wextra -c *.c
+ar rc liball.a *.o 
