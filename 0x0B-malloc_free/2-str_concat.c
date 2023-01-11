@@ -20,6 +20,9 @@ char *str_concat(char *s1, char *s2)
 		s1 = (" ");
 	if (s2 == NULL)
 		s2 = (" ");
+	if  ((s2 == NULL) && (s1 == NULL))
+		s1 = (" ");
+		s2 = (" ");
 
 	i = v_len(s1);
 	j = v_len(s2);
@@ -27,7 +30,6 @@ char *str_concat(char *s1, char *s2)
 	s = (char *) malloc(((i + j) + 1) * sizeof(char));
 
 	if (s == NULL)
-		s = (" ");
 		return (NULL);
 
 	for (index = 0; s1[index] != '\0'; index++)
