@@ -17,12 +17,9 @@ char *str_concat(char *s1, char *s2)
 	int index2;
 
 	if (s1 == NULL)
-		s1 = (" ");
+		s1 = ("");
 	if (s2 == NULL)
-		s2 = (" ");
-	if  ((s2 == NULL) || (s1 == NULL))
-		s1 = (" ");
-		s2 = (" ");
+		s2 = ("");
 
 	i = v_len(s1);
 	j = v_len(s2);
