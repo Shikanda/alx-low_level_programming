@@ -3,31 +3,26 @@
 #include <stdlib.h>
 
 /**
-*create_array - creates an array of characters
-*@size: array size
-*@c: characters
-*Return: NULL if size is 0 or pointer to the array
+*_calloc - allocate memory using malloc
+*@nmemb: number of elements in the array
+*@size: size of the bytes of the array
+*Return: NULL if it fails or pointer to the allocated memory
 */
-char *create_array(unsigned int size, char c)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *s;
 	unsigned int i;
+
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 
 	s = malloc(size * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-	if (size == 0)
-	{
-		return (NULL);
-	}
-	i = 0;
-	while (i < size)
-	{
-		s[i] = c;
-		i++;
-	}
-	s[i] = '\0';
+	for (i = 0; i < (nmemb * size); i++)
+		s[i] = 0;
+
 	return (s);
 }
