@@ -3,31 +3,45 @@
 #include <stdlib.h>
 
 /**
-*create_array - creates an array of characters
-*@size: array size
-*@c: characters
-*Return: NULL if size is 0 or pointer to the array
+*array_range - creates an array of integers
+*@min: smallest values in the array
+*@max: largest values in the array
+*Return: pointer to the new  array
 */
-char *create_array(unsigned int size, char c)
+int *array_range(int min, int max)
 {
 	char *s;
 	unsigned int i;
+	int j;
 
-	s = malloc(size * sizeof(char));
+
+	if (min > max)
+		return (NULL);
+
+	s = malloc(max * min);
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-	if (size == 0)
+	max = s[0]
+	for (i = 0; i < max; i++)
 	{
-		return (NULL);
+		if (max > s[i])
+			max = s[i];
 	}
-	i = 0;
-	while (i < size)
+	min = s[0]
+	for (i = 0; i < min; i++)
 	{
-		s[i] = c;
-		i++;
+		if (min < s[i])
+			min = s[i];
 	}
-	s[i] = '\0';
+	return (array_range);
+}
+
+
+
+
+
+
 	return (s);
 }
