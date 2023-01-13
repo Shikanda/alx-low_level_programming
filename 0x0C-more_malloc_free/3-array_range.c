@@ -28,12 +28,7 @@ int *array_range(int min, int max)
 	}
 	for (i = 0; i < j; i++)
 	{
-		if (j > s[i])
-			max = s[i];
-
-
-		if (j < s[i])
-			min = s[i];
+		min++ = s[i];
 	}
 	return (array_range);
 }
