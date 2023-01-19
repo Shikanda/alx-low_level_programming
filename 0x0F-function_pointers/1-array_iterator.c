@@ -5,16 +5,16 @@
 
 /**
 *array_iterator - prints a name
-*@name: name array
+*@array: name array
 *@size: size of the array
-*@: character array
+*@action: pointer to function you need to use
 *Return : Always 0
 */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i;
 
-	if (action == NULL &&  array[size] == 0)
+	if (action == NULL &&  array == 0)
 		return;
 
 	for (i = 0; i < size; i++)
