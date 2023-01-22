@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			lett = va_arg(args, char *);
-			while (lett == NULL)
+			if (lett == NULL)
 				lett = "(nil)";
 			printf("%s%s", lett, separator);
 			break;
