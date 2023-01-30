@@ -13,11 +13,11 @@ void free_list(list_t *head)
 	list_t *retval;
 
 
-	if (head)
+	while (head)
 	{
-		retval = head;
-		head = head->next;
-		free(retval->str);
-		free(retval);
+		retval = head->next;
+		free(head->str);
+		free(head);
+		head = retval;
 	}
 }
