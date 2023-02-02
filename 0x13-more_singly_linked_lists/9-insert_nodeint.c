@@ -6,7 +6,8 @@
 *insert_nodeint_at_index - inserts a new node at agivwn position
 *@head: head in the list
 *@idx: index position to be add
-*
+*@n: int value in the node
+ *
 *Return: address of the new node at index if not possible return NULL
 */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
@@ -18,12 +19,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (!head)
 		return (NULL);
 
-	place = *head;
+	newnode = *head;
 
 	place = malloc(sizeof(listint_t));
 
 	if (!place)
-		return(NULL);
+		return (NULL);
 
 	place->n = n;
 
@@ -31,10 +32,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		place->next = newnode;
 		*head = place;
-		return(*head);
+		return (*head);
 	}
 
-	for(i = 0; i < (idx -1); i++)
+	for (i = 0; i < (idx - 1); i++)
 	{
 		if (newnode)
 			newnode = newnode->next;
