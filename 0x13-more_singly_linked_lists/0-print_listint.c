@@ -6,7 +6,6 @@
 *print_listint - prints all the elements of a listint_t list
 *@h: head in th list
 *
-* if str is NULL print [0] (nil)
 *Return: the number of nodes
 */
 size_t print_listint(const listint_t *h)
@@ -17,11 +16,9 @@ size_t print_listint(const listint_t *h)
 
 	if (!h)
 		return (0);
-	if (h == NULL)
-		return (-1);
 	while (h)
 	{
-		printf("%u\n", h->n);
+		printf("%d\n", h->n);
 
 		ptr += 1;
 		h = h->next;
