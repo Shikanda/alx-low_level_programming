@@ -1,16 +1,24 @@
 #include "main.h"
 #include <stdio.h>
 /**
-*set_bit - sets value of a bit at a given index
-*@n: decimal number with the bit
-*@index: index starting from 0 of the bit i want
-*Return: 1 if it worked or -1 incase of an error
+*flip_bits - returns bits you would need to flip to get a no from another
+*@m: number to flip from
+*@n: number to flip to
+*Return: number of bits
 */
-int clear_bit(unsigned long int *n, unsigned int index)
-{
-	if (index >= (8 * sizeof(unsigned long int)))
-		return (-1);
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
-	*n &= ~(1 << index);
-	return (1);
+{
+	unsigned long int index;
+	unsigned long int binum;
+
+	index = 0;
+	binum = n ^ m;
+
+	do {
+		index = index + (binum & 1);
+
+		binum >>= 1;
+	} while (binum);
+	return (index);
 }
