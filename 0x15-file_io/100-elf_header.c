@@ -77,9 +77,9 @@ void ntry(void)
 	int len;
 	unsigned char *p;
 
-	*p = (unsigned char *)&h.e_entry;
-	int i = 0;
-	int len = 0;
+	p = (unsigned char *)&h.e_entry;
+	i = 0;
+	len = 0;
 	printf("  Entry point address:               0x");
 	if (h.e_ident[EI_DATA] == ELFDATA2MSB)
 	{
@@ -295,9 +295,9 @@ int main(int argc, char **argv)
 	pdata(buffer);
 	pversion(buffer);
 	pos(buffer);
-	pABIversion(buffer);
-	ptype(buffer);
-	pentry();
+	pABI(buffer);
+	typ(buffer);
+	ntry();
 
 	if (close(fd))
 		errors("Could not close the file");
