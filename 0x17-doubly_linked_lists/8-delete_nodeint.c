@@ -2,9 +2,9 @@
 
 /**
 * delete_dnodeint_at_index - delete node at index
-* @head: head of list
-* @index: where to delete
-* Return: the 1 on success, -1 on failure
+* @head: head list
+* @index: to delete
+* Return:  1 on success, -1 on fail
 */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
