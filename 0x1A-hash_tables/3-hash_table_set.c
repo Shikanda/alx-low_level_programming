@@ -1,5 +1,6 @@
 #include "hash_tables.h"
 
+hash_node_t *make_node(const char *key, const char *value);
 /**
 * hash_table_set - new element adding
 * @ht: table
@@ -37,7 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new = make_node(key, value);
 	if (!new)
 		return (0);
-	new->next = ht->array[index];
+	new->next = ht->array[i];
 	ht->array[i] = new;
 	return (1);
 }
